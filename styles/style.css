@@ -1,0 +1,11 @@
+body {
+	/*padding-left: 10em;
+	padding-right: 10em;*/
+	margin: 0;
+	font-family: 'Inconsolata', Consolas, monospace;
+	zoom: 200%;
+}
+
+.solid-line {
+	border-top: 3px solid #000000;
+}
