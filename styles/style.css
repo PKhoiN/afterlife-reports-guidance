@@ -3,9 +3,29 @@ body {
 	padding-right: 10em;*/
 	margin: 0;
 	font-family: 'Inconsolata', Consolas, monospace;
-	zoom: 200%;
+	zoom: 150%;
 }
 
 .solid-line {
 	border-top: 3px solid #000000;
+}
+
+button {
+	display: block;
+	border: 2px solid black;
+	background-color: white;
+	color: black;
+	font-family: 'Inconsolata', Consolas, monospace;
+	font-style: italic;
+	cursor: pointer;
+}
+
+button:hover {
+	font-style: italic;
+	background-color: black;
+	color: white;
+}
+
+.metadata {
+	font-style: italic;
 }
