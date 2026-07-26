@@ -6,12 +6,28 @@ body {
 	zoom: 150%;
 }
 
+.wrapper {
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+.wrapper-full-size {
+	margin-left: -1em;
+	margin-right: -1em;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
 .solid-line-3 {
+	margin-left: -1em;
+	margin-right: -1em;
 	border: none;
 	border-top: 3px solid #000000;
 }
 
 .solid-line-2 {
+	margin-left: -1em;
+	margin-right: -1em;
 	border: none;
 	border-top: 2px solid #000000;
 }
