@@ -37,7 +37,7 @@ function submitAnswer(){
 		"answer",
 		"answer",
 		"null",
-		"ogioyat",
+		"ogiouat",
 		10,
 		"care",
 		"heads",
