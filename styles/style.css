@@ -88,6 +88,12 @@ button:hover {
 	color: white;
 }
 
+input {
+	display: inline-block;
+	border: 2px solid black;
+	font-family: 'Inconsolata', Consolas, monospace;
+}
+
 .metadata {
 	font-style: italic;
 }
