@@ -92,6 +92,7 @@ input {
 	display: inline-block;
 	border: 2px solid black;
 	font-family: 'Inconsolata', Consolas, monospace;
+	outline: none;
 }
 
 .metadata {
