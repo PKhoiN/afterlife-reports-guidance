@@ -37,6 +37,15 @@ p, h1, h2 {
 	border-top: 2px solid #000000;
 }
 
+table, th, td {
+	border: 1px solid #000000;
+	border-collapse: collapse;
+}
+
+th, td {
+	text-align: center;
+}
+
 .ab-episode-card-container {
 	display: flex;
 	width: fit-content;
