@@ -77,6 +77,18 @@ th, td {
 	border-left: 2px solid black;
 }
 
+.ab-episode-card-fav-container {
+	display: flex;
+	flex-direction: column;
+	gap: 0px;
+	border: none;
+	border-left: 2px solid black;
+	align-items: center;
+	justify-content: center;
+	min-width: 1em;
+	font-weight: bold;
+}
+
 .ab-episode-card-right-container > * {
 	margin: 0px;
 }
