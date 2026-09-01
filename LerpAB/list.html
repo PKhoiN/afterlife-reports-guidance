@@ -9,839 +9,765 @@
 		<div class="wrapper">
 			<div>
 				<h1>LerpAB</h1>
-				<p>Episode count: 50</p>
+				<p>Episode count: 51</p>
 				<p>All episodes are written by PKhoiN. Please give credit! (Thanks)</p>
-				<p>PKhoiN's favorite episodes (denoted by ☆): <button id="list-toggle-fav-button" onclick="toggleFavVisibility()" style="display: inline-block;">Hide</button></p>
+				<p>PKhoiN's favorite episodes (denoted by ☆): <button id="list-toggle-fav-button" onclick="toggleFavVisibility()" style="display: inline-block;">Hide -> Show</button></p>
 				<p><a href="style-guide/style-guide.html">></a> LerpAB style guide</p>
 				<p><a href="../index.html"><</a> Return</p>
 
-				<div class="ab-episode-card-container">
-					<div class="ab-episode-card-left-container">
-						<a href="AB1/AB1.html" class="ab-episode-card-number-link">1</a>
-					</div>
-					<div class="ab-episode-card-right-container">
-						<p>This is a door</p>
-						<hr class="solid-line-2">
-						<p>022/07/2026</p>
-						<p>Cast: A and B</p>
-						<p>Style: Transcript</p>
-						<p>Reading time: ~15 sec</p>
-					</div>
-				</div>
+				<hr class="solid-line-3">
 
+				<p style="width: 100%; display: flex; gap: 8px;">Search title:<input id="list-title-search-input" type="text" style="flex: 1;"></p>
+				<div>
+					<button id="list-search-button" onclick="listSearch('Edit')" style="display: inline-block;">Search (Edit distance)</button>
+					<button id="list-search-button" onclick="listSearch('Wordplay')" style="display: inline-block;">Search (Wordplay)</button>
+				</div>
 				<br>
 
-				<div class="ab-episode-card-container">
-					<div class="ab-episode-card-left-container">
-						<a href="AB2/AB2.html" class="ab-episode-card-number-link">2</a>
+				<div id="list-episodes-card-container" style="display: flex; flex-direction: column; gap: 1em;">
+					<div class="ab-episode-card-container">
+						<div class="ab-episode-card-left-container">
+							<a href="AB1/AB1.html" class="ab-episode-card-number-link">1</a>
+						</div>
+						<div class="ab-episode-card-right-container">
+							<p>This is a door</p>
+							<hr class="solid-line-2">
+							<p>022/07/2026</p>
+							<p>Cast: A and B</p>
+							<p>Style: Transcript</p>
+							<p>Reading time: ~15 sec</p>
+						</div>
 					</div>
-					<div class="ab-episode-card-right-container">
-						<p>Dark arts</p>
-						<hr class="solid-line-2">
-						<p>022/07/2026</p>
-						<p>Cast: A and B</p>
-						<p>Style: Transcript + Background art</p>
-						<p>Reading time: ~30 sec</p>
-					</div>
-				</div>
 
-				<br>
+					<div style="background: linear-gradient(to bottom, white 0px, black 2em, black calc(100% - 2em), white 100%); color: white;" class="ab-episode-card-container">
+						<div class="ab-episode-card-left-container">
+							<a href="AB2/AB2.html" class="ab-episode-card-number-link">2</a>
+						</div>
+						<div class="ab-episode-card-right-container">
+							<p style="color: black;">Dark arts</p>
+							<hr class="solid-line-2">
+							<p>022/07/2026</p>
+							<p>Cast: A and B</p>
+							<p>Style: Transcript + Background art</p>
+							<p style="color: black;">Reading time: ~30 sec</p>
+						</div>
+					</div>
+					
+					<div class="ab-episode-card-container">
+						<div class="ab-episode-card-left-container">
+							<a href="AB3/AB3.html" class="ab-episode-card-number-link">3</a>
+						</div>
+						<div class="ab-episode-card-right-container">
+							<p>Did not follow</p>
+							<hr class="solid-line-2">
+							<p>023/07/2026</p>
+							<p>Cast: A and B</p>
+							<p>Style: Script</p>
+							<p>Reading time: ~90 sec</p>
+						</div>
+						<div style="display: none;" class="ab-episode-card-fav-container">
+							<p>☆</p>
+						</div>
+					</div>
 
-				<div class="ab-episode-card-container">
-					<div class="ab-episode-card-left-container">
-						<a href="AB3/AB3.html" class="ab-episode-card-number-link">3</a>
+					<div style="background: linear-gradient(to bottom, white 50%, blue);" class="ab-episode-card-container">
+						<div class="ab-episode-card-left-container">
+							<a href="AB4/AB4.html" class="ab-episode-card-number-link" style="transform: rotate(170deg);">4</a>
+						</div>
+						<div class="ab-episode-card-right-container">
+							<p>170 degrees</p>
+							<hr class="solid-line-2">
+							<p>023/07/2026</p>
+							<p>Cast: A and B</p>
+							<p>Style: Transcript + Diagram + Background art</p>
+							<p>Reading time: ~30 sec</p>
+						</div>
 					</div>
-					<div class="ab-episode-card-right-container">
-						<p>Did not follow</p>
-						<hr class="solid-line-2">
-						<p>023/07/2026</p>
-						<p>Cast: A and B</p>
-						<p>Style: Script</p>
-						<p>Reading time: ~90 sec</p>
-					</div>
-					<div class="ab-episode-card-fav-container">
-						<p>☆</p>
-					</div>
-				</div>
 
-				<br>
+					<div class="ab-episode-card-container">
+						<div class="ab-episode-card-left-container">
+							<a href="AB5/AB5.html" class="ab-episode-card-number-link">5</a>
+						</div>
+						<div class="ab-episode-card-right-container">
+							<p>Get the salt</p>
+							<hr class="solid-line-2">
+							<p>023/07/2026</p>
+							<p>Cast: A and B</p>
+							<p>Style: Transcript + Tape + Dynamic</p>
+							<p>Reading time: ~60 sec</p>
+						</div>
+					</div>
 
-				<div class="ab-episode-card-container">
-					<div class="ab-episode-card-left-container">
-						<a href="AB4/AB4.html" class="ab-episode-card-number-link">4</a>
+					<div class="ab-episode-card-container" style="background-color: rgb(200, 200, 225); color: white; font-weight: bold; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); border-color: white;">
+						<div class="ab-episode-card-left-container">
+							<a href="AB6/AB6.html" class="ab-episode-card-number-link">6</a>
+						</div>
+						<div class="ab-episode-card-right-container" style="border-color: white;">
+							<p style="color: blue;">Left 2 die</p>
+							<hr class="solid-line-2" style="border-color: white;">
+							<p>024/07/2026</p>
+							<p>Cast: A and B</p>
+							<p>Style: Transcript + Background art + Text art + Puzzle</p>
+							<p>Reading time: ~60 sec</p>
+						</div>
 					</div>
-					<div class="ab-episode-card-right-container">
-						<p>170 degrees</p>
-						<hr class="solid-line-2">
-						<p>023/07/2026</p>
-						<p>Cast: A and B</p>
-						<p>Style: Transcript + Diagram + Background art</p>
-						<p>Reading time: ~30 sec</p>
-					</div>
-				</div>
 
-				<br>
+					<div class="ab-episode-card-container">
+						<div class="ab-episode-card-left-container">
+							<a href="AB7/AB7.html" class="ab-episode-card-number-link">7</a>
+						</div>
+						<div class="ab-episode-card-right-container">
+							<p>Totally lost</p>
+							<hr class="solid-line-2">
+							<p>024/07/2026</p>
+							<p>Cast: A and B</p>
+							<p>Style: Transcript</p>
+							<p>Reading time: ~90 sec</p>
+						</div>
+						<div style="display: none;" class="ab-episode-card-fav-container">
+							<p>☆</p>
+						</div>
+					</div>
 
-				<div class="ab-episode-card-container">
-					<div class="ab-episode-card-left-container">
-						<a href="AB5/AB5.html" class="ab-episode-card-number-link">5</a>
+					<div class="ab-episode-card-container">
+						<div class="ab-episode-card-left-container">
+							<a href="AB8/AB8.html" class="ab-episode-card-number-link">8</a>
+						</div>
+						<div class="ab-episode-card-right-container">
+							<p>3-way intersection</p>
+							<hr class="solid-line-2">
+							<p>025/07/2026</p>
+							<p>Cast: <span style="color: red;">A</span> and B</p>
+							<p>Style: Transcript + Text art + Diagram</p>
+							<p>Reading time: ~90 sec</p>
+						</div>
 					</div>
-					<div class="ab-episode-card-right-container">
-						<p>Get the salt</p>
-						<hr class="solid-line-2">
-						<p>023/07/2026</p>
-						<p>Cast: A and B</p>
-						<p>Style: Transcript + Tape + Dynamic</p>
-						<p>Reading time: ~60 sec</p>
+					<div class="ab-episode-card-container" style="background-color: #cc8f52; color: white; text-shadow: 2px 2px 0px #8ae65c80; border-color: white;">
+						<div class="ab-episode-card-left-container">
+							<a href="AB9/AB9.html" class="ab-episode-card-number-link">9</a>
+						</div>
+						<div style="border-color: white;" class="ab-episode-card-right-container">
+							<p>Treasure here (Part 1 out of 3)</p>
+							<hr style="border-color: white;" class="solid-line-2">
+							<p>025/07/2026</p>
+							<p>Cast: A and B</p>
+							<p>Style: Transcript + Script + Background art + Text art</p>
+							<p>Reading time: ~90 sec</p>
+						</div>
 					</div>
-				</div>
 
-				<br>
+					<div class="ab-episode-card-container" style="background-color: #cc8f52; color: white; text-shadow: 2px 2px 0px #8ae65c80; border-color: white;">
+						<div class="ab-episode-card-left-container">
+							<a href="AB10/AB10.html" class="ab-episode-card-number-link">10</a>
+						</div>
+						<div style="border-color: white;" class="ab-episode-card-right-container">
+							<p>Treasure here (Part 2 out of 3)</p>
+							<hr style="border-color: white;" class="solid-line-2">
+							<p>025/07/2026</p>
+							<p>Cast: B</p>
+							<p>Style: Script + Background art + Text art</p>
+							<p>Reading time: ~150 sec</p>
+						</div>
+						<div style="display: none; border-color: white;" class="ab-episode-card-fav-container">
+							<p>☆</p>
+						</div>
+					</div>
 
-				<div class="ab-episode-card-container" style="background-color: rgb(200, 200, 225); color: white; font-weight: bold; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);">
-					<div class="ab-episode-card-left-container">
-						<a href="AB6/AB6.html" class="ab-episode-card-number-link">6</a>
+					<div class="ab-episode-card-container" style="background-color: #cc8f52; color: white; text-shadow: 2px 2px 0px #8ae65c80; border-color: white;">
+						<div class="ab-episode-card-left-container">
+							<a href="AB11/AB11.html" class="ab-episode-card-number-link">11</a>
+						</div>
+						<div style="border-color: white;" class="ab-episode-card-right-container">
+							<p>Treasure here (Part 3 out of 3)</p>
+							<hr style="border-color: white;" class="solid-line-2">
+							<p>025/07/2026</p>
+							<p>Cast: A and B</p>
+							<p>Style: Transcript + Background art + Text art</p>
+							<p>Reading time: ~30 sec</p>
+						</div>
 					</div>
-					<div class="ab-episode-card-right-container">
-						<p>Left 2 die</p>
-						<hr class="solid-line-2">
-						<p>024/07/2026</p>
-						<p>Cast: A and B</p>
-						<p>Style: Transcript + Background art + Text art + Puzzle</p>
-						<p>Reading time: ~60 sec</p>
-					</div>
-				</div>
 
-				<br>
+					<div class="ab-episode-card-container">
+						<div class="ab-episode-card-left-container">
+							<a href="AB12/AB12.html" class="ab-episode-card-number-link">12</a>
+						</div>
+						<div class="ab-episode-card-right-container">
+							<p>Find true happiness</p>
+							<hr class="solid-line-2">
+							<p>026/07/2026</p>
+							<p>Cast: You</p>
+							<p>Style: None</p>
+							<p>Reading time: ~10 sec</p>
+						</div>
+					</div>
 
-				<div class="ab-episode-card-container">
-					<div class="ab-episode-card-left-container">
-						<a href="AB7/AB7.html" class="ab-episode-card-number-link">7</a>
+					<div class="ab-episode-card-container" style="background-color: black; color: white; border-color: white; text-shadow: 4px -4px 2px #ffffff40;">
+						<div class="ab-episode-card-left-container">
+							<a href="AB13/AB13.html" class="ab-episode-card-number-link">13</a>
+						</div>
+						<div class="ab-episode-card-right-container" style="border-color: white;">
+							<p>You do it</p>
+							<hr class="solid-line-2" style="border-color: white;">
+							<p>027/07/2026</p>
+							<p>Cast: A, B, and something</p>
+							<p>Style: Transcript + Background art + Text art</p>
+							<p>Reading time: ~90 sec</p>
+						</div>
+						<div class="ab-episode-card-fav-container" style="display: none; border-color: white;">
+							<p>☆</p>
+						</div>
 					</div>
-					<div class="ab-episode-card-right-container">
-						<p>Totally lost</p>
-						<hr class="solid-line-2">
-						<p>024/07/2026</p>
-						<p>Cast: A and B</p>
-						<p>Style: Transcript</p>
-						<p>Reading time: ~90 sec</p>
-					</div>
-					<div class="ab-episode-card-fav-container">
-						<p>☆</p>
-					</div>
-				</div>
 
-				<br>
+					<div class="ab-episode-card-container">
+						<div class="ab-episode-card-left-container">
+							<a href="AB14/AB14.html" class="ab-episode-card-number-link">14</a>
+						</div>
+						<div class="ab-episode-card-right-container">
+							<p>Won for today</p>
+							<hr class="solid-line-2">
+							<p>029/07/2026</p>
+							<p>Cast: You</p>
+							<p>Style: Puzzle</p>
+							<p>Reading/Solving time: ~240 sec</p>
+						</div>
+					</div>
 
-				<div class="ab-episode-card-container">
-					<div class="ab-episode-card-left-container">
-						<a href="AB8/AB8.html" class="ab-episode-card-number-link">8</a>
+					<div class="ab-episode-card-container">
+						<div class="ab-episode-card-left-container">
+							<a href="AB15/AB15.html" class="ab-episode-card-number-link">15</a>
+						</div>
+						<div class="ab-episode-card-right-container">
+							<p>Not now</p>
+							<hr class="solid-line-2">
+							<p>029/07/2026</p>
+							<p>Cast: A and B</p>
+							<p>Style: Transcript</p>
+							<p>Reading time: ~10 sec</p>
+						</div>
 					</div>
-					<div class="ab-episode-card-right-container">
-						<p>3-way intersection</p>
-						<hr class="solid-line-2">
-						<p>025/07/2026</p>
-						<p>Cast: A and B</p>
-						<p>Style: Transcript + Text art + Diagram</p>
-						<p>Reading time: ~90 sec</p>
-					</div>
-				</div>
 
-				<br>
+					<div class="ab-episode-card-container">
+						<div class="ab-episode-card-left-container">
+							<a href="AB16/AB16.html" class="ab-episode-card-number-link">16</a>
+						</div>
+						<div class="ab-episode-card-right-container">
+							<p>Unconventional restrictions</p>
+							<hr class="solid-line-2">
+							<p>030/07/2026</p>
+							<p>Cast: A and B</p>
+							<p>Style: Transcript</p>
+							<p>Reading time: ~210 sec</p>
+						</div>
+						<div style="display: none;" class="ab-episode-card-fav-container">
+							<p>☆</p>
+						</div>
+					</div>
 
-				<div class="ab-episode-card-container" style="background-color: #cc8f52; color: white; text-shadow: 2px 2px 0px #8ae65c80;">
-					<div class="ab-episode-card-left-container">
-						<a href="AB9/AB9.html" class="ab-episode-card-number-link">9</a>
+					<div class="ab-episode-card-container">
+						<div class="ab-episode-card-left-container">
+							<a href="AB17/AB17.html" class="ab-episode-card-number-link">17</a>
+						</div>
+						<div class="ab-episode-card-right-container">
+							<p>Signed in <span style="color: red; text-decoration: underline; font-weight: bold;">blood</span></p>
+							<hr class="solid-line-2">
+							<p>030/07/2026</p>
+							<p>Cast: A and B</p>
+							<p>Style: Transcript + Text art</p>
+							<p>Reading time: ~60 sec</p>
+						</div>
 					</div>
-					<div class="ab-episode-card-right-container">
-						<p>Treasure here (Part 1 out of 3)</p>
-						<hr class="solid-line-2">
-						<p>025/07/2026</p>
-						<p>Cast: A and B</p>
-						<p>Style: Transcript + Script + Background art + Text art</p>
-						<p>Reading time: ~90 sec</p>
-					</div>
-				</div>
 
-				<br>
+					<div class="ab-episode-card-container" style="background-color: #17171a; color: rgb(200, 200, 200); text-shadow: 0px -4px 4px #ffffff80; border-color: rgb(200, 200, 200);">
+						<div class="ab-episode-card-left-container">
+							<a href="AB18/AB18.html" class="ab-episode-card-number-link">18</a>
+						</div>
+						<div class="ab-episode-card-right-container" style="border-color: rgb(200, 200, 200);">
+							<p>Shine your way</p>
+							<hr class="solid-line-2" style="border-color: rgb(200, 200, 200);">
+							<p>031/07/2026</p>
+							<p>Cast: A and B</p>
+							<p>Style: Transcript + Background art + Foreground art + Text art + Puzzle</p>
+							<p>Reading time: ~30 sec</p>
+						</div>
+					</div>
 
-				<div class="ab-episode-card-container" style="background-color: #cc8f52; color: white; text-shadow: 2px 2px 0px #8ae65c80;">
-					<div class="ab-episode-card-left-container">
-						<a href="AB10/AB10.html" class="ab-episode-card-number-link">10</a>
+					<div class="ab-episode-card-container">
+						<div class="ab-episode-card-left-container">
+							<a href="AB19/AB19.html" class="ab-episode-card-number-link">19</a>
+						</div>
+						<div class="ab-episode-card-right-container">
+							<p>Sense danger</p>
+							<hr class="solid-line-2">
+							<p>031/07/2026</p>
+							<p>Cast: A and B</p>
+							<p>Style: Transcript + Text art</p>
+							<p>Reading time: ~30 sec</p>
+						</div>
 					</div>
-					<div class="ab-episode-card-right-container">
-						<p>Treasure here (Part 2 out of 3)</p>
-						<hr class="solid-line-2">
-						<p>025/07/2026</p>
-						<p>Cast: B</p>
-						<p>Style: Script + Background art + Text art</p>
-						<p>Reading time: ~150 sec</p>
-					</div>
-					<div class="ab-episode-card-fav-container">
-						<p>☆</p>
-					</div>
-				</div>
 
-				<br>
+					<div class="ab-episode-card-container" style="background-color: hsl(35, 40%, 70%); color: white; text-shadow: 4px 4px 2px #00000080; border-color: white; box-shadow: 4px 4px 2px #00000080">
+						<div class="ab-episode-card-left-container">
+							<a href="AB20/AB20.html" class="ab-episode-card-number-link">20</a>
+						</div>
+						<div class="ab-episode-card-right-container" style="border-color: white;">
+							<p>20 tickets</p>
+							<hr class="solid-line-2" style="border-color: white;">
+							<p>031/07/2026</p>
+							<p>Cast: A and B</p>
+							<p>Style: Transcript + Script + Background art + Foreground art + Text art + Diagram + Audio + Puzzle</p>
+							<p>Reading time: ~120 sec</p>
+						</div>
+						<div class="ab-episode-card-fav-container" style="display: none; border-color: white;">
+							<p>☆</p>
+						</div>
+					</div>
 
-				<div class="ab-episode-card-container" style="background-color: #cc8f52; color: white; text-shadow: 2px 2px 0px #8ae65c80;">
-					<div class="ab-episode-card-left-container">
-						<a href="AB11/AB11.html" class="ab-episode-card-number-link">11</a>
+					<div class="ab-episode-card-container">
+						<div class="ab-episode-card-left-container">
+							<a href="AB21/AB21.html" class="ab-episode-card-number-link">21</a>
+						</div>
+						<div class="ab-episode-card-right-container">
+							<p>It went down</p>
+							<hr class="solid-line-2">
+							<p>001/08/2026</p>
+							<p>Cast: A and B</p>
+							<p>Style: Transcript + Puzzle</p>
+							<p>Reading time: ~120 sec</p>
+						</div>
+						<div style="display: none;" class="ab-episode-card-fav-container">
+							<p>☆</p>
+						</div>
 					</div>
-					<div class="ab-episode-card-right-container">
-						<p>Treasure here (Part 3 out of 3)</p>
-						<hr class="solid-line-2">
-						<p>025/07/2026</p>
-						<p>Cast: A and B</p>
-						<p>Style: Transcript + Background art + Text art</p>
-						<p>Reading time: ~30 sec</p>
-					</div>
-				</div>
 
-				<br>
+					<div class="ab-episode-card-container">
+						<div class="ab-episode-card-left-container">
+							<a href="AB22/AB22.html" class="ab-episode-card-number-link">22</a>
+						</div>
+						<div class="ab-episode-card-right-container">
+							<p>The South Pole</p>
+							<hr class="solid-line-2">
+							<p>001/08/2026</p>
+							<p>Cast: A and B</p>
+							<p>Style: Transcript</p>
+							<p>Reading time: ~20 sec</p>
+						</div>
+					</div>
 
-				<div class="ab-episode-card-container">
-					<div class="ab-episode-card-left-container">
-						<a href="AB12/AB12.html" class="ab-episode-card-number-link">12</a>
+					<div class="ab-episode-card-container">
+						<div class="ab-episode-card-left-container">
+							<a href="AB23/AB23.html" class="ab-episode-card-number-link">23</a>
+						</div>
+						<div class="ab-episode-card-right-container">
+							<p>Tuesday was banned</p>
+							<hr class="solid-line-2">
+							<p>001/08/2026</p>
+							<p>Cast: A and B</p>
+							<p>Style: Script</p>
+							<p>Reading time: ~60 sec</p>
+						</div>
 					</div>
-					<div class="ab-episode-card-right-container">
-						<p>Find true happiness</p>
-						<hr class="solid-line-2">
-						<p>026/07/2026</p>
-						<p>Cast: You</p>
-						<p>Style: None</p>
-						<p>Reading time: ~10 sec</p>
-					</div>
-				</div>
 
-				<br>
+					<div class="ab-episode-card-container">
+						<div class="ab-episode-card-left-container">
+							<a href="AB24/AB24.html" class="ab-episode-card-number-link">24</a>
+						</div>
+						<div class="ab-episode-card-right-container">
+							<p>Right decision</p>
+							<hr class="solid-line-2">
+							<p>001/08/2026</p>
+							<p>Cast: You</p>
+							<p>Style: None</p>
+							<p>Reading time: ~10 sec</p>
+						</div>
+					</div>
 
-				<div class="ab-episode-card-container" style="background-color: black; color: white; border-color: white; text-shadow: 4px -4px 2px #ffffff40;">
-					<div class="ab-episode-card-left-container">
-						<a href="AB13/AB13.html" class="ab-episode-card-number-link">13</a>
+					<div class="ab-episode-card-container">
+						<div class="ab-episode-card-left-container">
+							<a href="AB25/AB25.html" class="ab-episode-card-number-link">25</a>
+						</div>
+						<div class="ab-episode-card-right-container">
+							<p>Special firework</p>
+							<hr class="solid-line-2">
+							<p>001/08/2026</p>
+							<p>Cast: A and B</p>
+							<p>Style: Transcript + Puzzle</p>
+							<p>Reading time: ~10 sec</p>
+						</div>
 					</div>
-					<div class="ab-episode-card-right-container" style="border-color: white;">
-						<p>You do it</p>
-						<hr class="solid-line-2" style="border-color: white;">
-						<p>027/07/2026</p>
-						<p>Cast: A, B, and something</p>
-						<p>Style: Transcript + Background art + Text art</p>
-						<p>Reading time: ~90 sec</p>
-					</div>
-					<div class="ab-episode-card-fav-container" style="border-color: white;">
-						<p>☆</p>
-					</div>
-				</div>
 
-				<br>
+					<div class="ab-episode-card-container" style="background-color: #90bf60; color: white; text-shadow: 2px 2px 2px #00000080; border-color: white;">
+						<div class="ab-episode-card-left-container">
+							<a href="AB26/AB26.html" class="ab-episode-card-number-link">26</a>
+						</div>
+						<div class="ab-episode-card-right-container" style="border-color: white;">
+							<p>THE RIVER IS FLOWING THE WRONG WAY!</p>
+							<hr class="solid-line-2" style="border-color: white;">
+							<p>001/08/2026</p>
+							<p>Cast: A</p>
+							<p>Style: Transcript + Script + Background art + Text art</p>
+							<p>Reading time: ~90 sec</p>
+						</div>
+						<div class="ab-episode-card-fav-container" style="display: none; border-color: white;">
+							<p>☆</p>
+						</div>
+					</div>
 
-				<div class="ab-episode-card-container">
-					<div class="ab-episode-card-left-container">
-						<a href="AB14/AB14.html" class="ab-episode-card-number-link">14</a>
+					<div class="ab-episode-card-container" style="background-color: #90bf60; color: white; text-shadow: 2px 2px 2px #00000080; border-color: white;">
+						<div class="ab-episode-card-left-container">
+							<a href="AB27/AB27.html" class="ab-episode-card-number-link">27</a>
+						</div>
+						<div class="ab-episode-card-right-container" style="border-color: white;">
+							<p>THE RIVER IS FLOWING THE RIGHT WAY!</p>
+							<hr class="solid-line-2" style="border-color: white;">
+							<p>001/08/2026</p>
+							<p>Cast: B</p>
+							<p>Style: Transcript + Background art + Text art</p>
+							<p>Reading time: ~45 sec</p>
+						</div>
 					</div>
-					<div class="ab-episode-card-right-container">
-						<p>Won for today</p>
-						<hr class="solid-line-2">
-						<p>029/07/2026</p>
-						<p>Cast: You</p>
-						<p>Style: Puzzle</p>
-						<p>Reading/Solving time: ~240 sec</p>
-					</div>
-				</div>
 
-				<br>
+					<div class="ab-episode-card-container">
+						<div class="ab-episode-card-left-container">
+							<a href="AB28/AB28.html" class="ab-episode-card-number-link">28</a>
+						</div>
+						<div class="ab-episode-card-right-container">
+							<p>Won for time</p>
+							<hr class="solid-line-2">
+							<p>001/08/2026</p>
+							<p>Cast: You</p>
+							<p>Style: Puzzle</p>
+							<p>Reading/Solving time: ~300 sec</p>
+						</div>
+					</div>
 
-				<div class="ab-episode-card-container">
-					<div class="ab-episode-card-left-container">
-						<a href="AB15/AB15.html" class="ab-episode-card-number-link">15</a>
+					<div class="ab-episode-card-container">
+						<div class="ab-episode-card-left-container">
+							<a href="AB29/AB29.html" class="ab-episode-card-number-link">29</a>
+						</div>
+						<div class="ab-episode-card-right-container">
+							<p>For the price of a fork</p>
+							<hr class="solid-line-2">
+							<p>001/08/2026</p>
+							<p>Cast: A and B</p>
+							<p>Style: Transcript + Rewrite</p>
+							<p>Reading time: ~120 sec</p>
+						</div>
 					</div>
-					<div class="ab-episode-card-right-container">
-						<p>Not now</p>
-						<hr class="solid-line-2">
-						<p>029/07/2026</p>
-						<p>Cast: A and B</p>
-						<p>Style: Transcript</p>
-						<p>Reading time: ~10 sec</p>
-					</div>
-				</div>
 
-				<br>
+					<div class="ab-episode-card-container">
+						<div class="ab-episode-card-left-container">
+							<a href="AB30/AB30.html" class="ab-episode-card-number-link">30</a>
+						</div>
+						<div class="ab-episode-card-right-container">
+							<p>Destroy that cake</p>
+							<hr class="solid-line-2">
+							<p>001/08/2026</p>
+							<p>Cast: A, B, and ""</p>
+							<p>Style: Transcript</p>
+							<p>Reading time: ~60 sec</p>
+						</div>
+					</div>
 
-				<div class="ab-episode-card-container">
-					<div class="ab-episode-card-left-container">
-						<a href="AB16/AB16.html" class="ab-episode-card-number-link">16</a>
+					<div class="ab-episode-card-container">
+						<div class="ab-episode-card-left-container">
+							<a href="AB31/AB31.html" class="ab-episode-card-number-link">31</a>
+						</div>
+						<div class="ab-episode-card-right-container">
+							<p>Stay together ("It follows us" Part 1)</p>
+							<hr class="solid-line-2">
+							<p>002/08/2026</p>
+							<p>Cast: A, B, and <span style="color: black; font-weight: bold;">it</span></p>
+							<p>Style: Transcript + Text art</p>
+							<p>Reading time: ~60 sec</p>
+						</div>
 					</div>
-					<div class="ab-episode-card-right-container">
-						<p>Unconventional restrictions</p>
-						<hr class="solid-line-2">
-						<p>030/07/2026</p>
-						<p>Cast: A and B</p>
-						<p>Style: Transcript</p>
-						<p>Reading time: ~210 sec</p>
-					</div>
-					<div class="ab-episode-card-fav-container">
-						<p>☆</p>
-					</div>
-				</div>
 
-				<br>
+					<div class="ab-episode-card-container" style="background-color: #204880; color: white; text-shadow: 2px 2px 2px #00000080; border-color: white;">
+						<div class="ab-episode-card-left-container">
+							<a href="AB32/AB32.html" class="ab-episode-card-number-link">32</a>
+						</div>
+						<div class="ab-episode-card-right-container" style="border-color: white;">
+							<p>A harsh life ("It follows us" Part 2)</p>
+							<hr class="solid-line-2" style="border-color: white;">
+							<p>002/08/2026</p>
+							<p>Cast: A, B, and <span style="color: black; font-weight: bold;">it</span></p>
+							<p>Style: Transcript + Background art + Text art</p>
+							<p>Reading time: ~180 sec</p>
+						</div>
+						<div class="ab-episode-card-fav-container" style="display: none; border-color: white;">
+							<p>☆</p>
+						</div>
+					</div>
 
-				<div class="ab-episode-card-container">
-					<div class="ab-episode-card-left-container">
-						<a href="AB17/AB17.html" class="ab-episode-card-number-link">17</a>
+					<div class="ab-episode-card-container">
+						<div class="ab-episode-card-left-container">
+							<a href="AB33/AB33.html" class="ab-episode-card-number-link">33</a>
+						</div>
+						<div class="ab-episode-card-right-container">
+							<p>Still far away ("It follows us" Part 3)</p>
+							<hr class="solid-line-2">
+							<p>003/08/2026</p>
+							<p>Cast: A, B, and <span style="color: black; font-weight: bold;">it</span></p>
+							<p>Style: Transcript + Script + Background art + Text art</p>
+							<p>Reading time: ~90 sec</p>
+						</div>
 					</div>
-					<div class="ab-episode-card-right-container">
-						<p>Signed in <span style="color: red; text-decoration: underline; font-weight: bold;">blood</span></p>
-						<hr class="solid-line-2">
-						<p>030/07/2026</p>
-						<p>Cast: A and B</p>
-						<p>Style: Transcript + Text art</p>
-						<p>Reading time: ~60 sec</p>
-					</div>
-				</div>
 
-				<br>
+					<div class="ab-episode-card-container" style="background-color: #202020; color: white; text-shadow: 4px 4px 2px #80808080; border-color: white;">
+						<div class="ab-episode-card-left-container">
+							<a href="AB34/AB34.html" class="ab-episode-card-number-link">34</a>
+						</div>
+						<div class="ab-episode-card-right-container" style="border-color: white;">
+							<p>Let them wake up ("It follows us" Part 4)</p>
+							<hr class="solid-line-2" style="border-color: white;">
+							<p>003/08/2026</p>
+							<p>Cast: A, B, and <span style="color: black; font-weight: bold;">it</span></p>
+							<p>Style: Transcript + Background art + Foreground art + Text art + Puzzle</p>
+							<p>Reading time: ~30 sec</p>
+						</div>
+					</div>
 
-				<div class="ab-episode-card-container" style="background-color: #17171a; color: rgb(200, 200, 200); text-shadow: 0px -4px 4px #ffffff80; border-color: rgb(200, 200, 200);">
-					<div class="ab-episode-card-left-container">
-						<a href="AB18/AB18.html" class="ab-episode-card-number-link">18</a>
+					<div class="ab-episode-card-container" style="background-color: #101010; color: white; text-shadow: 2px 2px 1px #808080C0; border-color: white;">
+						<div class="ab-episode-card-left-container">
+							<a href="AB35/AB35.html" class="ab-episode-card-number-link">35</a>
+						</div>
+						<div class="ab-episode-card-right-container" style="border-color: white;">
+							<p>A better life ("It follows us" Part 5, Finale)</p>
+							<hr class="solid-line-2" style="border-color: white;">
+							<p>003/08/2026</p>
+							<p>Cast: A, B, and <span style="color: black; font-weight: bold;">it</span></p>
+							<p>Style: Transcript + Script + Background art + Foreground art + Text art + Puzzle</p>
+							<p>Reading time: ~60 sec</p>
+						</div>
 					</div>
-					<div class="ab-episode-card-right-container" style="border-color: rgb(200, 200, 200);">
-						<p>Shine your way</p>
-						<hr class="solid-line-2" style="border-color: rgb(200, 200, 200);">
-						<p>031/07/2026</p>
-						<p>Cast: A and B</p>
-						<p>Style: Transcript + Background art + Foreground art + Text art + Puzzle</p>
-						<p>Reading time: ~30 sec</p>
-					</div>
-				</div>
 
-				<br>
+					<div class="ab-episode-card-container">
+						<div class="ab-episode-card-left-container">
+							<a href="AB36/AB36.html" class="ab-episode-card-number-link">36</a>
+						</div>
+						<div class="ab-episode-card-right-container">
+							<p>Take a break if you need it</p>
+							<hr class="solid-line-2">
+							<p>004/08/2026</p>
+							<p>Cast: You</p>
+							<p>Style: None</p>
+							<p>Reading time: ~0 sec</p>
+						</div>
+					</div>
 
-				<div class="ab-episode-card-container">
-					<div class="ab-episode-card-left-container">
-						<a href="AB19/AB19.html" class="ab-episode-card-number-link">19</a>
+					<div class="ab-episode-card-container">
+						<div class="ab-episode-card-left-container">
+							<a href="AB37/AB37.html" class="ab-episode-card-number-link">37</a>
+						</div>
+						<div class="ab-episode-card-right-container">
+							<p>Chaotic quotation marks</p>
+							<hr class="solid-line-2">
+							<p>005/08/2026</p>
+							<p>Cast: A and B</p>
+							<p>Style: Transcript</p>
+							<p>Reading time: ~20 sec</p>
+						</div>
 					</div>
-					<div class="ab-episode-card-right-container">
-						<p>Sense danger</p>
-						<hr class="solid-line-2">
-						<p>031/07/2026</p>
-						<p>Cast: A and B</p>
-						<p>Style: Transcript + Text art</p>
-						<p>Reading time: ~30 sec</p>
-					</div>
-				</div>
 
-				<br>
+					<div class="ab-episode-card-container" style="background: linear-gradient(to bottom, #79caf2 0px, white 100%);">
+						<div class="ab-episode-card-left-container">
+							<a href="AB38/AB38.html" class="ab-episode-card-number-link">38</a>
+						</div>
+						<div class="ab-episode-card-right-container">
+							<p>The sky was flying away</p>
+							<hr class="solid-line-2">
+							<p>005/08/2026</p>
+							<p>Cast: A and B</p>
+							<p>Style: Transcript + Background art + Puzzle</p>
+							<p>Reading time: ~60 sec</p>
+						</div>
+					</div>
 
-				<div class="ab-episode-card-container" style="background-color: hsl(35, 40%, 70%); color: white; text-shadow: 4px 4px 2px #00000080; border-color: white; box-shadow: 4px 4px 2px #00000080">
-					<div class="ab-episode-card-left-container">
-						<a href="AB20/AB20.html" class="ab-episode-card-number-link">20</a>
+					<div class="ab-episode-card-container">
+						<div class="ab-episode-card-left-container">
+							<a href="AB39/AB39.html" class="ab-episode-card-number-link">39</a>
+						</div>
+						<div class="ab-episode-card-right-container">
+							<p>Just following the signs</p>
+							<hr class="solid-line-2">
+							<p>005/08/2026</p>
+							<p>Cast: A and B</p>
+							<p>Style: Transcript + Diagram</p>
+							<p>Reading time: ~180 sec</p>
+						</div>
+						<div style="display: none;" class="ab-episode-card-fav-container">
+							<p>☆</p>
+						</div>
 					</div>
-					<div class="ab-episode-card-right-container" style="border-color: white;">
-						<p>20 tickets</p>
-						<hr class="solid-line-2" style="border-color: white;">
-						<p>031/07/2026</p>
-						<p>Cast: A and B</p>
-						<p>Style: Transcript + Script + Background art + Foreground art + Text art + Diagram + Audio + Puzzle</p>
-						<p>Reading time: ~120 sec</p>
-					</div>
-					<div class="ab-episode-card-fav-container" style="border-color: white;">
-						<p>☆</p>
-					</div>
-				</div>
 
-				<br>
+					<div class="ab-episode-card-container">
+						<div class="ab-episode-card-left-container">
+							<a href="AB40/AB40.html" class="ab-episode-card-number-link">40</a>
+						</div>
+						<div class="ab-episode-card-right-container">
+							<p>Psychologically straightforward recommendations</p>
+							<hr class="solid-line-2">
+							<p>006/08/2026</p>
+							<p>Cast: A and B</p>
+							<p>Style: Transcript + Audio + Puzzle</p>
+							<p>Reading time: ~90 sec</p>
+						</div>
+					</div>
 
-				<div class="ab-episode-card-container">
-					<div class="ab-episode-card-left-container">
-						<a href="AB21/AB21.html" class="ab-episode-card-number-link">21</a>
+					<div class="ab-episode-card-container">
+						<div class="ab-episode-card-left-container">
+							<a href="AB41/AB41.html" class="ab-episode-card-number-link">41</a>
+						</div>
+						<div class="ab-episode-card-right-container">
+							<p>10AB-10-1|L1234|R1 or 16AB-10-1|L34|R01</p>
+							<hr class="solid-line-2">
+							<p>008/08/2026</p>
+							<p>Cast: None</p>
+							<p>Style: Showcase</p>
+							<p>Reading time: ~45 sec</p>
+						</div>
 					</div>
-					<div class="ab-episode-card-right-container">
-						<p>It went down</p>
-						<hr class="solid-line-2">
-						<p>001/08/2026</p>
-						<p>Cast: A and B</p>
-						<p>Style: Transcript + Puzzle</p>
-						<p>Reading time: ~120 sec</p>
+					<div class="ab-episode-card-container" style="background-color: #fefefe;">
+						<div class="ab-episode-card-left-container">
+							<a href="AB42/AB42.html" class="ab-episode-card-number-link">42</a>
+						</div>
+						<div class="ab-episode-card-right-container">
+							<p>Meaning of life</p>
+							<hr class="solid-line-2">
+							<p>008/08/2026</p>
+							<p>Cast: You</p>
+							<p>Style: Puzzle</p>
+							<p>Reading/Solving time: ~600 sec</p>
+						</div>
 					</div>
-					<div class="ab-episode-card-fav-container">
-						<p>☆</p>
-					</div>
-				</div>
 
-				<br>
-
-				<div class="ab-episode-card-container">
-					<div class="ab-episode-card-left-container">
-						<a href="AB22/AB22.html" class="ab-episode-card-number-link">22</a>
+					<div class="ab-episode-card-container">
+						<div class="ab-episode-card-left-container">
+							<a href="AB43/AB43.html" class="ab-episode-card-number-link">43</a>
+						</div>
+						<div class="ab-episode-card-right-container">
+							<p>To kick your</p>
+							<hr class="solid-line-2">
+							<p>009/08/2026</p>
+							<p>Cast: A and B</p>
+							<p>Style: Transcript</p>
+							<p>Reading time: ~15 sec</p>
+						</div>
 					</div>
-					<div class="ab-episode-card-right-container">
-						<p>The South Pole</p>
-						<hr class="solid-line-2">
-						<p>001/08/2026</p>
-						<p>Cast: A and B</p>
-						<p>Style: Transcript</p>
-						<p>Reading time: ~20 sec</p>
-					</div>
-				</div>
 
-				<br>
-
-				<div class="ab-episode-card-container">
-					<div class="ab-episode-card-left-container">
-						<a href="AB23/AB23.html" class="ab-episode-card-number-link">23</a>
+					<div class="ab-episode-card-container">
+						<div class="ab-episode-card-left-container">
+							<a href="AB44/AB44.html" class="ab-episode-card-number-link">44</a>
+						</div>
+						<div class="ab-episode-card-right-container">
+							<p>Works like a projectile</p>
+							<hr class="solid-line-2">
+							<p>009/08/2026</p>
+							<p>Cast: A and B</p>
+							<p>Style: Transcript + Background art + Text art</p>
+							<p>Reading time: ~90 sec</p>
+						</div>
 					</div>
-					<div class="ab-episode-card-right-container">
-						<p>Tuesday was banned</p>
-						<hr class="solid-line-2">
-						<p>001/08/2026</p>
-						<p>Cast: A and B</p>
-						<p>Style: Script</p>
-						<p>Reading time: ~60 sec</p>
-					</div>
-				</div>
 
-				<br>
-
-				<div class="ab-episode-card-container">
-					<div class="ab-episode-card-left-container">
-						<a href="AB24/AB24.html" class="ab-episode-card-number-link">24</a>
+					<div class="ab-episode-card-container" style="background: linear-gradient(to right, #400000, #000040); color: white; text-shadow: 0px 0px 10px white; border-color: white;">
+						<div class="ab-episode-card-left-container">
+							<a href="AB45/AB45.html" class="ab-episode-card-number-link">45</a>
+						</div>
+						<div class="ab-episode-card-right-container" style="border-color: white;">
+							<p>I shouldn't be alone</p>
+							<hr class="solid-line-2" style="border-color: white;">
+							<p>011/08/2026</p>
+							<p>Cast: A and B</p>
+							<p>Style: Transcript + Background art + Text art + Dynamic</p>
+							<p>Reading time: ~75 sec</p>
+						</div>
 					</div>
-					<div class="ab-episode-card-right-container">
-						<p>Right decision</p>
-						<hr class="solid-line-2">
-						<p>001/08/2026</p>
-						<p>Cast: You</p>
-						<p>Style: None</p>
-						<p>Reading time: ~10 sec</p>
+
+					<div class="ab-episode-card-container" style="background-color: #000000; background-image: url(../assets/AB46-stars.png); background-size: 20em 20em; color: white; text-shadow: 0px 0px 20px white; border-color: white;">
+						<div class="ab-episode-card-left-container">
+							<a href="AB46/AB46.html" class="ab-episode-card-number-link">46</a>
+						</div>
+						<div class="ab-episode-card-right-container" style="border-color: white;">
+							<p>Astronomical relationship</p>
+							<hr class="solid-line-2" style="border-color: white;">
+							<p>012/08/2026</p>
+							<p>Cast: A and B</p>
+							<p>Style: Transcript + Background art + Text art + Image art</p>
+							<p>Reading time: ~60 sec</p>
+						</div>
+					</div>
+
+					<div class="ab-episode-card-container" style="background-color: #42661f; color: white; text-shadow: 6px 3px 5px #000000D0; border-color: white;">
+						<div class="ab-episode-card-left-container">
+							<a href="AB47/AB47.html" class="ab-episode-card-number-link">47</a>
+						</div>
+						<div class="ab-episode-card-right-container" style="border-color: white;">
+							<p>Mythical Forest</p>
+							<hr class="solid-line-2" style="border-color: white;">
+							<p>013/08/2026</p>
+							<p>Cast: A and B</p>
+							<p>Style: Transcript + Background art + Text art</p>
+							<p>Reading time: ~60 sec</p>
+						</div>
+					</div>
+
+					<div class="ab-episode-card-container">
+						<div class="ab-episode-card-left-container">
+							<a href="AB48/AB48.html" class="ab-episode-card-number-link">48</a>
+						</div>
+						<div class="ab-episode-card-right-container">
+							<p>What is the goal in everything?</p>
+							<hr class="solid-line-2">
+							<p>014/08/2026</p>
+							<p>Cast: You</p>
+							<p>Style: None</p>
+							<p>Reading time: ~0 sec</p>
+						</div>
+					</div>
+
+					<div class="ab-episode-card-container">
+						<div class="ab-episode-card-left-container">
+							<a href="AB49/AB49.html" class="ab-episode-card-number-link">49</a>
+						</div>
+						<div class="ab-episode-card-right-container">
+							<p>All at once</p>
+							<hr class="solid-line-2">
+							<p>014/08/2026</p>
+							<p>Cast: A</p>
+							<p>Style: Transcript + Tape</p>
+							<p>Reading time: ~90 sec</p>
+						</div>
+					</div>
+
+					<div class="ab-episode-card-container">
+						<div class="ab-episode-card-left-container">
+							<a href="AB50/AB50.html" class="ab-episode-card-number-link">50</a>
+						</div>
+						<div class="ab-episode-card-right-container">
+							<p>Nah</p>
+							<hr class="solid-line-2">
+							<p>015/08/2026</p>
+							<p>Cast: A and B</p>
+							<p>Style: Comic (Image art + Transcript + Background art + Text art)</p>
+							<p>Reading time: ~30 sec</p>
+						</div>
+					</div>
+
+					<div class="ab-episode-card-container">
+						<div class="ab-episode-card-left-container">
+							<a href="AB51/AB51.html" class="ab-episode-card-number-link">51</a>
+						</div>
+						<div class="ab-episode-card-right-container">
+							<p>5000 steps, and a bit more</p>
+							<hr class="solid-line-2">
+							<p>001/09/2026</p>
+							<p>Cast: A and B</p>
+							<p>Style: Transcript</p>
+							<p>Reading time: ~300 sec</p>
+						</div>
 					</div>
 				</div>
 				
-				<br>
-
-				<div class="ab-episode-card-container">
-					<div class="ab-episode-card-left-container">
-						<a href="AB25/AB25.html" class="ab-episode-card-number-link">25</a>
-					</div>
-					<div class="ab-episode-card-right-container">
-						<p>Special firework</p>
-						<hr class="solid-line-2">
-						<p>001/08/2026</p>
-						<p>Cast: A and B</p>
-						<p>Style: Transcript + Puzzle</p>
-						<p>Reading time: ~10 sec</p>
-					</div>
-				</div>
-
-				<br>
-
-				<div class="ab-episode-card-container" style="background-color: #90bf60; color: white; text-shadow: 2px 2px 2px #00000080; border-color: white;">
-					<div class="ab-episode-card-left-container">
-						<a href="AB26/AB26.html" class="ab-episode-card-number-link">26</a>
-					</div>
-					<div class="ab-episode-card-right-container" style="border-color: white;">
-						<p>THE RIVER IS FLOWING THE WRONG WAY!</p>
-						<hr class="solid-line-2" style="border-color: white;">
-						<p>001/08/2026</p>
-						<p>Cast: A</p>
-						<p>Style: Transcript + Script + Background art + Text art</p>
-						<p>Reading time: ~90 sec</p>
-					</div>
-					<div class="ab-episode-card-fav-container" style="border-color: white;">
-						<p>☆</p>
-					</div>
-				</div>
-
-				<br>
-
-				<div class="ab-episode-card-container" style="background-color: #90bf60; color: white; text-shadow: 2px 2px 2px #00000080; border-color: white;">
-					<div class="ab-episode-card-left-container">
-						<a href="AB27/AB27.html" class="ab-episode-card-number-link">27</a>
-					</div>
-					<div class="ab-episode-card-right-container" style="border-color: white;">
-						<p>THE RIVER IS FLOWING THE RIGHT WAY!</p>
-						<hr class="solid-line-2" style="border-color: white;">
-						<p>001/08/2026</p>
-						<p>Cast: B</p>
-						<p>Style: Transcript + Background art + Text art</p>
-						<p>Reading time: ~45 sec</p>
-					</div>
-				</div>
-
-				<br>
-
-				<div class="ab-episode-card-container">
-					<div class="ab-episode-card-left-container">
-						<a href="AB28/AB28.html" class="ab-episode-card-number-link">28</a>
-					</div>
-					<div class="ab-episode-card-right-container">
-						<p>Won for time</p>
-						<hr class="solid-line-2">
-						<p>001/08/2026</p>
-						<p>Cast: You</p>
-						<p>Style: Puzzle</p>
-						<p>Reading/Solving time: ~300 sec</p>
-					</div>
-				</div>
-
-				<br>
-
-				<div class="ab-episode-card-container">
-					<div class="ab-episode-card-left-container">
-						<a href="AB29/AB29.html" class="ab-episode-card-number-link">29</a>
-					</div>
-					<div class="ab-episode-card-right-container">
-						<p>For the price of a fork</p>
-						<hr class="solid-line-2">
-						<p>001/08/2026</p>
-						<p>Cast: A and B</p>
-						<p>Style: Transcript + Rewrite</p>
-						<p>Reading time: ~120 sec</p>
-					</div>
-				</div>
-
-				<br>
-
-				<div class="ab-episode-card-container">
-					<div class="ab-episode-card-left-container">
-						<a href="AB30/AB30.html" class="ab-episode-card-number-link">30</a>
-					</div>
-					<div class="ab-episode-card-right-container">
-						<p>Destroy that cake</p>
-						<hr class="solid-line-2">
-						<p>001/08/2026</p>
-						<p>Cast: A, B, and ""</p>
-						<p>Style: Transcript</p>
-						<p>Reading time: ~60 sec</p>
-					</div>
-				</div>
-
-				<br>
-
-				<div class="ab-episode-card-container">
-					<div class="ab-episode-card-left-container">
-						<a href="AB31/AB31.html" class="ab-episode-card-number-link">31</a>
-					</div>
-					<div class="ab-episode-card-right-container">
-						<p>Stay together ("It follows us" Part 1)</p>
-						<hr class="solid-line-2">
-						<p>002/08/2026</p>
-						<p>Cast: A, B, and <span style="color: black; font-weight: bold;">it</span></p>
-						<p>Style: Transcript + Text art</p>
-						<p>Reading time: ~60 sec</p>
-					</div>
-				</div>
-
-				<br>
-
-				<div class="ab-episode-card-container" style="background-color: #204880; color: white; text-shadow: 2px 2px 2px #00000080; border-color: white;">
-					<div class="ab-episode-card-left-container">
-						<a href="AB32/AB32.html" class="ab-episode-card-number-link">32</a>
-					</div>
-					<div class="ab-episode-card-right-container" style="border-color: white;">
-						<p>A harsh life ("It follows us" Part 2)</p>
-						<hr class="solid-line-2" style="border-color: white;">
-						<p>002/08/2026</p>
-						<p>Cast: A, B, and <span style="color: black; font-weight: bold;">it</span></p>
-						<p>Style: Transcript + Background art + Text art</p>
-						<p>Reading time: ~180 sec</p>
-					</div>
-					<div class="ab-episode-card-fav-container" style="border-color: white;">
-						<p>☆</p>
-					</div>
-				</div>
-
-				<br>
-
-				<div class="ab-episode-card-container">
-					<div class="ab-episode-card-left-container">
-						<a href="AB33/AB33.html" class="ab-episode-card-number-link">33</a>
-					</div>
-					<div class="ab-episode-card-right-container">
-						<p>Still far away ("It follows us" Part 3)</p>
-						<hr class="solid-line-2">
-						<p>003/08/2026</p>
-						<p>Cast: A, B, and <span style="color: black; font-weight: bold;">it</span></p>
-						<p>Style: Transcript + Script + Background art + Text art</p>
-						<p>Reading time: ~90 sec</p>
-					</div>
-				</div>
-
-				<br>
-
-				<div class="ab-episode-card-container" style="background-color: #202020; color: white; text-shadow: 4px 4px 2px #80808080; border-color: white;">
-					<div class="ab-episode-card-left-container">
-						<a href="AB34/AB34.html" class="ab-episode-card-number-link">34</a>
-					</div>
-					<div class="ab-episode-card-right-container" style="border-color: white;">
-						<p>Let them wake up ("It follows us" Part 4)</p>
-						<hr class="solid-line-2" style="border-color: white;">
-						<p>003/08/2026</p>
-						<p>Cast: A, B, and <span style="color: black; font-weight: bold;">it</span></p>
-						<p>Style: Transcript + Background art + Foreground art + Text art + Puzzle</p>
-						<p>Reading time: ~30 sec</p>
-					</div>
-				</div>
-
-				<br>
-
-				<div class="ab-episode-card-container" style="background-color: #101010; color: white; text-shadow: 2px 2px 1px #808080C0; border-color: white;">
-					<div class="ab-episode-card-left-container">
-						<a href="AB35/AB35.html" class="ab-episode-card-number-link">35</a>
-					</div>
-					<div class="ab-episode-card-right-container" style="border-color: white;">
-						<p>A better life ("It follows us" Part 5, Finale)</p>
-						<hr class="solid-line-2" style="border-color: white;">
-						<p>003/08/2026</p>
-						<p>Cast: A, B, and <span style="color: black; font-weight: bold;">it</span></p>
-						<p>Style: Transcript + Script + Background art + Foreground art + Text art + Puzzle</p>
-						<p>Reading time: ~60 sec</p>
-					</div>
-				</div>
-
-				<br>
-
-				<div class="ab-episode-card-container">
-					<div class="ab-episode-card-left-container">
-						<a href="AB36/AB36.html" class="ab-episode-card-number-link">36</a>
-					</div>
-					<div class="ab-episode-card-right-container">
-						<p>Take a break if you need it</p>
-						<hr class="solid-line-2">
-						<p>004/08/2026</p>
-						<p>Cast: You</p>
-						<p>Style: None</p>
-						<p>Reading time: ~0 sec</p>
-					</div>
-				</div>
-
-				<br>
-
-				<div class="ab-episode-card-container">
-					<div class="ab-episode-card-left-container">
-						<a href="AB37/AB37.html" class="ab-episode-card-number-link">37</a>
-					</div>
-					<div class="ab-episode-card-right-container">
-						<p>Chaotic quotation marks</p>
-						<hr class="solid-line-2">
-						<p>005/08/2026</p>
-						<p>Cast: A and B</p>
-						<p>Style: Transcript</p>
-						<p>Reading time: ~20 sec</p>
-					</div>
-				</div>
-
-				<br>
-
-				<div class="ab-episode-card-container" style="background: linear-gradient(to bottom, #79caf2 0px, white 100%);">
-					<div class="ab-episode-card-left-container">
-						<a href="AB38/AB38.html" class="ab-episode-card-number-link">38</a>
-					</div>
-					<div class="ab-episode-card-right-container">
-						<p>The sky was flying away</p>
-						<hr class="solid-line-2">
-						<p>005/08/2026</p>
-						<p>Cast: A and B</p>
-						<p>Style: Transcript + Background art + Puzzle</p>
-						<p>Reading time: ~60 sec</p>
-					</div>
-				</div>
-
-				<br>
-
-				<div class="ab-episode-card-container">
-					<div class="ab-episode-card-left-container">
-						<a href="AB39/AB39.html" class="ab-episode-card-number-link">39</a>
-					</div>
-					<div class="ab-episode-card-right-container">
-						<p>Just following the signs</p>
-						<hr class="solid-line-2">
-						<p>005/08/2026</p>
-						<p>Cast: A and B</p>
-						<p>Style: Transcript + Diagram</p>
-						<p>Reading time: ~180 sec</p>
-					</div>
-					<div class="ab-episode-card-fav-container">
-						<p>☆</p>
-					</div>
-				</div>
-
-				<br>
-
-				<div class="ab-episode-card-container">
-					<div class="ab-episode-card-left-container">
-						<a href="AB40/AB40.html" class="ab-episode-card-number-link">40</a>
-					</div>
-					<div class="ab-episode-card-right-container">
-						<p>Psychologically straightforward recommendations</p>
-						<hr class="solid-line-2">
-						<p>006/08/2026</p>
-						<p>Cast: A and B</p>
-						<p>Style: Transcript + Audio + Puzzle</p>
-						<p>Reading time: ~90 sec</p>
-					</div>
-				</div>
-
-				<br>
-
-				<div class="ab-episode-card-container">
-					<div class="ab-episode-card-left-container">
-						<a href="AB41/AB41.html" class="ab-episode-card-number-link">41</a>
-					</div>
-					<div class="ab-episode-card-right-container">
-						<p>10AB-10-1|L1234|R1 or 16AB-10-1|L34|R01</p>
-						<hr class="solid-line-2">
-						<p>008/08/2026</p>
-						<p>Cast: None</p>
-						<p>Style: Showcase</p>
-						<p>Reading time: ~45 sec</p>
-					</div>
-				</div>
-
-				<br>
-
-				<div class="ab-episode-card-container" style="background-color: #fefefe;">
-					<div class="ab-episode-card-left-container">
-						<a href="AB42/AB42.html" class="ab-episode-card-number-link">42</a>
-					</div>
-					<div class="ab-episode-card-right-container">
-						<p>Meaning of life</p>
-						<hr class="solid-line-2">
-						<p>008/08/2026</p>
-						<p>Cast: You</p>
-						<p>Style: Puzzle</p>
-						<p>Reading/Solving time: ~600 sec</p>
-					</div>
-				</div>
-
-				<br>
-
-				<div class="ab-episode-card-container">
-					<div class="ab-episode-card-left-container">
-						<a href="AB43/AB43.html" class="ab-episode-card-number-link">43</a>
-					</div>
-					<div class="ab-episode-card-right-container">
-						<p>To kick your</p>
-						<hr class="solid-line-2">
-						<p>009/08/2026</p>
-						<p>Cast: A and B</p>
-						<p>Style: Transcript</p>
-						<p>Reading time: ~15 sec</p>
-					</div>
-				</div>
-
-				<br>
-
-				<div class="ab-episode-card-container">
-					<div class="ab-episode-card-left-container">
-						<a href="AB44/AB44.html" class="ab-episode-card-number-link">44</a>
-					</div>
-					<div class="ab-episode-card-right-container">
-						<p>Works like a projectile</p>
-						<hr class="solid-line-2">
-						<p>009/08/2026</p>
-						<p>Cast: A and B</p>
-						<p>Style: Transcript + Background art + Text art</p>
-						<p>Reading time: ~90 sec</p>
-					</div>
-				</div>
-
-				<br>
-
-				<div class="ab-episode-card-container" style="background: linear-gradient(to right, #400000, #000040); color: white; text-shadow: 0px 0px 10px white; border-color: white;">
-					<div class="ab-episode-card-left-container">
-						<a href="AB45/AB45.html" class="ab-episode-card-number-link">45</a>
-					</div>
-					<div class="ab-episode-card-right-container" style="border-color: white;">
-						<p>I shouldn't be alone</p>
-						<hr class="solid-line-2" style="border-color: white;">
-						<p>011/08/2026</p>
-						<p>Cast: A and B</p>
-						<p>Style: Transcript + Background art + Text art + Dynamic</p>
-						<p>Reading time: ~75 sec</p>
-					</div>
-				</div>
-
-				<br>
-
-				<div class="ab-episode-card-container" style="background-color: #000000; background-image: url(../assets/AB46-stars.png); background-size: 20em 20em; color: white; text-shadow: 0px 0px 20px white; border-color: white;">
-					<div class="ab-episode-card-left-container">
-						<a href="AB46/AB46.html" class="ab-episode-card-number-link">46</a>
-					</div>
-					<div class="ab-episode-card-right-container" style="border-color: white;">
-						<p>Astronomical relationship</p>
-						<hr class="solid-line-2" style="border-color: white;">
-						<p>012/08/2026</p>
-						<p>Cast: A and B</p>
-						<p>Style: Transcript + Background art + Text art + Image art</p>
-						<p>Reading time: ~60 sec</p>
-					</div>
-				</div>
-
-				<br>
-
-				<div class="ab-episode-card-container" style="background-color: #42661f; color: white; text-shadow: 6px 3px 5px #000000D0; border-color: white;">
-					<div class="ab-episode-card-left-container">
-						<a href="AB47/AB47.html" class="ab-episode-card-number-link">47</a>
-					</div>
-					<div class="ab-episode-card-right-container" style="border-color: white;">
-						<p>Mythical Forest</p>
-						<hr class="solid-line-2" style="border-color: white;">
-						<p>013/08/2026</p>
-						<p>Cast: A and B</p>
-						<p>Style: Transcript + Background art + Text art</p>
-						<p>Reading time: ~60 sec</p>
-					</div>
-				</div>
-
-				<br>
-
-				<div class="ab-episode-card-container">
-					<div class="ab-episode-card-left-container">
-						<a href="AB48/AB48.html" class="ab-episode-card-number-link">48</a>
-					</div>
-					<div class="ab-episode-card-right-container">
-						<p>What is the goal in everything?</p>
-						<hr class="solid-line-2">
-						<p>014/08/2026</p>
-						<p>Cast: You</p>
-						<p>Style: None</p>
-						<p>Reading time: ~0 sec</p>
-					</div>
-				</div>
-
-				<br>
-
-				<div class="ab-episode-card-container">
-					<div class="ab-episode-card-left-container">
-						<a href="AB49/AB49.html" class="ab-episode-card-number-link">49</a>
-					</div>
-					<div class="ab-episode-card-right-container">
-						<p>All at once</p>
-						<hr class="solid-line-2">
-						<p>014/08/2026</p>
-						<p>Cast: A</p>
-						<p>Style: Transcript + Tape</p>
-						<p>Reading time: ~90 sec</p>
-					</div>
-				</div>
-
-				<br>
-
-				<div class="ab-episode-card-container">
-					<div class="ab-episode-card-left-container">
-						<a href="AB50/AB50.html" class="ab-episode-card-number-link">50</a>
-					</div>
-					<div class="ab-episode-card-right-container">
-						<p>Nah</p>
-						<hr class="solid-line-2">
-						<p>015/08/2026</p>
-						<p>Cast: A and B</p>
-						<p>Style: Comic (Image art + Transcript + Background art + Text art)</p>
-						<p>Reading time: ~30 sec</p>
-					</div>
-				</div>
 			</div>
 
 			<hr class="solid-line-3">
